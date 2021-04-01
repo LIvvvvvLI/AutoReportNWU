@@ -2,7 +2,7 @@
 AutoReportNWU offers NWUer an automatic reporter.
 
 ## Requirements
-```bash
+```cmd
 pip install -r requirements.txt
 ```
 
@@ -11,17 +11,17 @@ pip install -r requirements.txt
 ### Local Mode
 
 #### Initialization
-```bash
-python autoReport.py local --username 1234 --password abc123
+```cmd
+python autoReport.py local --username $YourUsername$ --password $YourPassword$
 ```
 #### Run
-```bash
+```cmd
 python autoReport.py local
 ```
 
 ### Online Mode
-```bash
-python autoReport.py online --username *** --password ***
+```cmd
+python autoReport.py online --username $YourUsername$ --password $YourPassword$
 ```
 
 ## Description
