@@ -3,7 +3,7 @@ AutoReportNWU offers NWUer an automatic reporter.
 
 ## Requirements
 ```bash
-pip install -r requirements
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -12,7 +12,7 @@ pip install -r requirements
 
 #### Initialization
 ```bash
-python autoReport.py local --username *** --password ***
+python autoReport.py local --username 1234 --password abc123
 ```
 #### Run
 ```bash
@@ -25,6 +25,6 @@ python autoReport.py online --username *** --password ***
 ```
 
 ## Description
-The local mode will create the `cookies.json` to store your cookies.
+The local mode will create a `cookies.json` to store your cookies.
 
 If you want to change your report data, please modify `reportdata.json`.
