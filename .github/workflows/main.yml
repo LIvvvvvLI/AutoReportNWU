@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.7.9'
       - name: Cache pip
-          id: cache
+          id: cacheStep
         uses: actions/cache@v2
         with:
           # This path is specific to Ubuntu
@@ -35,7 +35,7 @@ jobs:
             ${{ runner.os }}-pip-
             ${{ runner.os }}-
       - name: Install dependencies
-          if: steps.cache.outputs.cache-hit != 'true'
+          if: steps.cacheStep.outputs.cache-hit != 'true'
          run: pip install -r requirements.txt
       - name : Run app
         env:
