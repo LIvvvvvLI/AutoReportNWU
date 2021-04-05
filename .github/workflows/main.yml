@@ -38,7 +38,6 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install dependencies
-        if: steps.cache-pip.outputs.cache-hit != 'true'
         run: pip install -r requirements.txt
 
       - name : Run app
