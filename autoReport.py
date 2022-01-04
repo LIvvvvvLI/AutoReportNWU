@@ -89,7 +89,7 @@ def login_sys(username, password):
                       'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.428'
                       '0.88 Safari/537.36 Edg/87.0.664.60',
     }
-    res = requests.get(url_sys)  # 请求登录界面
+    res = requests.get(url=url_sys, headers=headers)  # 请求登录界面
     # {'JSESSIONID': ''}
     cookies_JSESSIONID = requests.utils.dict_from_cookiejar(res.cookies)
     if DEBUG:
