@@ -1,7 +1,5 @@
 # AutoReportNWU
-AutoReportNWU offers NWUer an automatic reporter.
-
-**Tips：only for learning**
+AutoReportNWU offers NWUer an automatic reporter.**(only for learning)**
 
 ## Requirements
 ```cmd
