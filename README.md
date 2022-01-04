@@ -1,6 +1,8 @@
 # AutoReportNWU
 AutoReportNWU offers NWUer an automatic reporter.
 
+**Tips：only for learning**
+
 ## Requirements
 ```cmd
 pip install -r requirements.txt
@@ -28,5 +30,3 @@ python autoReport.py online --username $YourUsername$ --password $YourPassword$
 The local mode will create a `cookies.json` to store your cookies.
 
 If you want to change your report data, please modify `reportdata.json`.
-
-**Tips：only for learning**
