@@ -28,4 +28,5 @@ python autoReport.py online --username $YourUsername$ --password $YourPassword$
 The local mode will create a `cookies.json` to store your cookies.
 
 If you want to change your report data, please modify `reportdata.json`.
+
 **Tips：only for learning**
