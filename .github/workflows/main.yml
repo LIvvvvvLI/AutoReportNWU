@@ -46,4 +46,4 @@ jobs:
           password: ${{secrets.PASSWORD}}
           username_w: ${{secrets.USERNAME_W}}
           password_w: ${{secrets.PASSWORD_W}}
-        run: python autoReport.py online --username $username --password $password
+        run: python autoReport.py online --username $username_w --password $password_w
