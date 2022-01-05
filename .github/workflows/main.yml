@@ -44,4 +44,6 @@ jobs:
         env:
           username: ${{secrets.USERNAME}}
           password: ${{secrets.PASSWORD}}
-        run: python autoReport.py online --username $username --password $password
+          username_w: ${{secrets.USERNAME_W}}
+          password_w: ${{secrets.PASSWORD_W}}
+        run: python autoReport.py online --username $username --password $password;python autoReport.py online --username $username_w --password $password_w
