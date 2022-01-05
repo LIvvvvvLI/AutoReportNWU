@@ -9,7 +9,7 @@ from Crypto.Util.Padding import pad
 import base64
 import argparse
 
-DEBUG = False
+DEBUG = True
 
 
 class CookiesTimeOutError(Exception):
@@ -201,6 +201,7 @@ def report(headers, data, cookies):
     """填报，返回填报结果"""
     url_report = 'https://app.nwu.edu.cn/ncov/wap/open-report/save'
     save = requests.post(url=url_report, headers=headers, data=data, cookies=cookies)
+    print(save)
     message = save.text.split('"')[5]
     if message == '用户信息已失效,请重新进入页面':
         raise CookiesTimeOutError()
@@ -250,9 +251,11 @@ if __name__ == '__main__':
         # 在线模式
         else:
             if (args.username is not None) and (args.password is not None):
+                print('login')
                 cookies = login(args.username, args.password)
             else:
                 raise DataLackError
+            print(cookies)
     except FileNotFoundError:
         print('本地无用户信息，请通过命令行参数传入账号密码重试。')
     except DataLackError:
@@ -260,5 +263,6 @@ if __name__ == '__main__':
     except CookiesTimeOutError:
         print('cookies过期，请通过命令行参数传入账号密码重试。')
     else:
+        print('report')
         result = report(headers=headers_report, data=data_report, cookies=cookies)
         print(result)
