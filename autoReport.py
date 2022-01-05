@@ -8,6 +8,7 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 import base64
 import argparse
+from requests.adapters import HTTPAdapter
 
 DEBUG = False
 
@@ -209,6 +210,11 @@ def report(headers, data, cookies):
 
 
 if __name__ == '__main__':
+    
+    s = requests.Session()
+    s.mount('http://', HTTPAdapter(max_retries = 3))
+    s.mount('https://', HTTPAdapter(max_retries = 3))
+    
     headers_report = {
         "Accept": "application/json, text/plain, */*",
         "Content-Type": "application/x-www-form-urlencoded",
